@@ -308,7 +308,7 @@ client.on('message', message => {
       client.on("ready", () => {
         var guild;
         while (!guild)
-            guild = client.guilds.get("497789996003229726");
+            guild = client.guilds.get("494804224740425728");
         guild.fetchInvites().then((data) => {
             data.forEach((Invite, key, map) => {
                 var Inv = Invite.code;
@@ -320,7 +320,7 @@ client.on('message', message => {
      
      
     client.on("guildMemberAdd", (member) => {
-        let channel = member.guild.channels.get("499680508792406027");
+        let channel = member.guild.channels.get("494804224740425730");
         if (!channel) {
             console.log("!the channel id it's not correct");
             return;
@@ -331,13 +331,13 @@ client.on('message', message => {
         console.log('-');
         var guild;
         while (!guild)
-            guild = client.guilds.get("497789996003229726");
+            guild = client.guilds.get("494804224740425728");
         guild.fetchInvites().then((data) => {
             data.forEach((Invite, key, map) => {
                 var Inv = Invite.code;
                 if (dat[Inv])
                     if (dat[Inv] < Invite.uses) {
-     channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;        
+     channel.send(`**${member},\n لقد تم دعوته بواسطهه .. [ ${invite.inviter} ] 🥂.**`) ;        
      }
                 dat[Inv] = Invite.uses;
            
